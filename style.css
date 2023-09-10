@@ -1,0 +1,116 @@
+/* Using position property to place the elements accordingly.
+The outermost border is 2px whereas the border after it (black one) is 10px. */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    border: 2px solid white;
+    width: 100%;
+}
+
+.container2 {
+    width: 100%; 
+    border: 10px solid #121212;
+    background-color:black;
+}
+/* The height of first & second rows are 90 & 80 px respectively */
+.blue-box {
+    height: 90px;
+    background-color: #64A8FF;
+}
+
+.line2 {
+    position: relative;
+}
+/* In the second row, each box is 25% wide. */
+.first-box {
+    width: 25%;
+    height: 80px;
+    background-color: #E87A44;
+    display: inline-block;
+}
+
+.second-box {
+    width: 25%;
+    height: 80px;
+    background-color: #784100;
+    position: absolute;
+    left: 25%;
+    bottom:0%;
+    top:0%;
+    display: inline-block;
+}
+
+.third-box {
+    width: 25%;
+    height: 80px;
+    background-color: #FF7498;
+    position: absolute;
+    left: 50%;
+    display: inline-block;
+}
+
+.fourth-box {
+    width: 25%;
+    height: 80px;
+    background-color: #5B5AB2;
+    position: absolute;
+    left: 75%;
+    display: inline-block;
+}
+/* The two columns (purple & grey) are 12.5% wide. */
+.line3 {
+    position: relative;
+}
+
+.pink-box {
+    background-color: #CD94E2;
+    height:400px;
+    width: 12.5%;
+}
+
+.black-box
+{
+    position:absolute;
+    left:12.5%;
+    width:75%;
+    height:410px;
+     top:0%;
+    background-color:#121212;
+}
+/* The size of box in the middle is 120x120px. */
+.center-box
+ { 
+    position:absolute;
+    margin:0 auto;
+    width:120px;
+    height:120px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) ;
+    background-color:#7F6800;
+    border:white 2px solid;
+}
+
+.gray-box {
+    background-color: #41474A;
+    width: 12.5%;
+    height:500px;
+    position: absolute;
+    /* absolute mean px counts from last element to its own position */
+    right: 0%;
+    top:0%;
+}
+/* The height of last row is 100px. */
+.green-box {
+    background-color: #008541;
+    width: 100%;
+    height: 100px;
+}
+
+/* mostly parents position are relative and child have absolute */
+/* i mostly use this case */
